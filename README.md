@@ -7,11 +7,11 @@ usuário: leticia
 passphase: le08fr07
 ### Utilize esse passo a passo para atualizar a página
 ### Bash
-sftp lsn@www.fisica.ufc.br
-sftp> cd /home/lsn/
-sftp> lcd "/home/leticia/Site LSN"
-sftp> put -r * 
-sftp> exit
+sftp lsn@www.fisica.ufc.br \\
+sftp> cd /home/lsn/ \\
+sftp> lcd "/home/leticia/Site LSN" \\
+sftp> put -r * \\
+sftp> exit \\
 
 
 
