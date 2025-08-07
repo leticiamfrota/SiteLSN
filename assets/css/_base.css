@@ -1,0 +1,342 @@
+/*
+ * Arquivo: _base.css
+ * Descrição: Contém estilos CSS base e globais para todo o site.
+ * Inclui resets, tipografia, estilos de navbar, footer,
+ * botões genéricos e os efeitos de headline/bounce comuns.
+ * Utilização: Importa _variables.css e é importado por todos os outros arquivos CSS de página.
+ */
+
+/* Importa as variáveis de cor */
+@import url('_variables.css');
+
+/* ================================================================
+   1. Reset e Tipografia Global
+   ================================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-text);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* ================================================================
+   2. Navbar
+   ================================================================ */
+.navbar,
+#mainNav {
+  background-color: var(--medium-green);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: none;
+  width: 100%;
+  height: 80px;
+}
+
+#mainNav.scrolled {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand,
+#mainNav .nav-link {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+#mainNav .nav-link {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+#mainNav .nav-link.active,
+#mainNav .nav-link:hover {
+  color: var(--dark-green);
+}
+
+#mainNav .btn-contact {
+  border: 3px solid;
+  border-radius: 50px;
+  background-color: var(--medium-green);
+  border-color: var(--dark-text);
+  color: white;
+  transition: background-color 0.3s ease;
+  font-size: 1.0rem;
+}
+
+#mainNav .btn-contact:hover,
+#mainNav .btn-contact:focus {
+  background-color: var(--dark-text);
+  border-color: var(--dark-text);
+}
+
+.nav-spacer {
+  height: 80px;
+}
+
+/* --- Media Queries para Navbar Mobile --- */
+@media (max-width: 991.98px) {
+  #mainNav {
+    height: auto; /* Permite que o menu colapsado se expanda */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative; /* Remove a posição fixa em mobile */
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 1050; /* Garante que a navbar fique por cima */
+  }
+
+  /* Sobrescreve fixed-top do Bootstrap se usado no HTML */
+  .navbar.fixed-top {
+    position: relative;
+    top: auto; /* Remove qualquer top fixo */
+  }
+
+  .nav-spacer {
+    height: 0; /* Espaçador não é necessário se a navbar não é fixed */
+  }
+
+  body {
+    padding-top: 0; /* Garante que o body não tenha padding extra de fixed-top */
+  }
+
+  #navbarSupportedContent {
+    background-color: var(--medium-green);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #mainNav .nav-item {
+    text-align: center;
+    padding: 8px 0;
+  }
+
+  #mainNav .nav-link {
+    font-size: 1rem;
+    padding: 5px 10px;
+  }
+
+  #mainNav .nav-link.active,
+  #mainNav .nav-link:hover {
+    color: white; /* Mantido como branco para melhor contraste no fundo verde */
+    background-color: #5a8564; /* Fundo mais escuro no hover */
+    border-radius: 5px;
+  }
+
+  #mainNav .d-flex {
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  #mainNav .nav-link {
+    font-size: 0.9rem;
+  }
+
+  #mainNav .btn-contact {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/* ================================================================
+   3. Botões Genéricos
+   ================================================================ */
+.btn-primary {
+  background-color: var(--peach);
+  border-color: var(--peach);
+  color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--brick-red);
+  border-color: var(--brick-red);
+}
+
+.btn-secondary {
+  background-color: var(--dark-green);
+  border-color: var(--dark-green);
+  color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--medium-green);
+  border-color: var(--medium-green);
+}
+
+.btn-link {
+  color: var(--dark-green);
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  color: var(--peach);
+}
+
+/* ================================================================
+   4. TÍTULO ELEMENTOR-STYLE HEADLINE + BOUNCE PER WORD COMBINADOS
+   ================================================================ */
+
+/* — 4.1. Título geral (posicionamento e tipografia) — */
+.elementor-widget-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.elementor-headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  text-align: center; /* Centraliza o texto do headline */
+}
+
+/* Ajuste de espaçamento abaixo do título */
+.text-center.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+/* ================================================================
+   4.2. EFEITO BOUNCE POR PALAVRA (.word)
+   ================================================================ */
+.bounce-title .word {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 0.6s ease forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Delays escalonados para cada palavra (ajustado para menos palavras) */
+.bounce-title .word:nth-child(1) { animation-delay: 0.00s; }
+.bounce-title .word:nth-child(2) { animation-delay: 0.10s; }
+.bounce-title .word:nth-child(3) { animation-delay: 0.20s; }
+.bounce-title .word:nth-child(4) { animation-delay: 0.30s; }
+
+
+/* ================================================================
+   4.3. TRAÇADO SVG SOB A PALAVRA DINÂMICA
+   ================================================================ */
+.elementor-headline .elementor-headline-dynamic-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.elementor-headline .elementor-headline-dynamic-text {
+  display: inline-block;
+  color: var(--dark-text);
+  z-index: 2;
+}
+
+.elementor-headline .elementor-headline-dynamic-wrapper svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.6em;
+  overflow: visible;
+  z-index: 1;
+  stroke: var(--vivid-orange);
+  stroke-width: 15;
+  fill: none;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawUnderline 1s ease-in-out 0.8s forwards;
+}
+
+@keyframes drawUnderline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ================================================================
+   5. FOOTER
+   ================================================================ */
+footer {
+  background-color: var(--dark-green);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ================================================================
+   6. MEDIA QUERIES PARA RESPONSIVIDADE (Gerais)
+   ================================================================ */
+@media (max-width: 576px) {
+  .elementor-headline {
+    font-size: 2rem;
+  }
+  .elementor-headline .elementor-headline-dynamic-wrapper svg {
+    height: 0.5em;
+    stroke-width: 3;
+  }
+}
+
+/* Seções com espaçamento vertical genérico */
+section.py-5 {
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}
+
+/* --- Estilo para a linha divisória verde --- */
+.section-divider {
+  border: 0;
+  border-top: 3px solid var(--dark-green);
+  opacity: 0.8;
+  max-width: 1300px;
+  margin: 0 auto 4rem auto;
+}

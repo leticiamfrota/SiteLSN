@@ -1,0 +1,23 @@
+<svg width="60" height="60" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- Linhas -->
+  <line x1="15" y1="25" x2="35" y2="25" stroke="#666" stroke-width="1">
+    <animate attributeName="x2" values="35;33;35" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="25;27;25" dur="2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="15" y1="25" x2="25" y2="15" stroke="#666" stroke-width="1">
+    <animate attributeName="x2" values="25;27;25" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="15;13;15" dur="1.8s" repeatCount="indefinite"/>
+  </line>
+  <line x1="25" y1="15" x2="35" y2="25" stroke="#666" stroke-width="1" />
+  
+  <!-- Nós -->
+  <circle cx="15" cy="25" r="4" fill="#1f77b4">
+    <animate attributeName="cy" values="25;23;25" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="35" cy="25" r="4" fill="#ff7f0e">
+    <animate attributeName="cy" values="25;27;25" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="25" cy="15" r="4" fill="#2ca02c">
+    <animate attributeName="cy" values="15;13;15" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+</svg>

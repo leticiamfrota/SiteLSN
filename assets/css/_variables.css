@@ -1,0 +1,21 @@
+/*
+ * Arquivo: _variables.css
+ * Descrição: Define as variáveis de cor globais para todo o site.
+ * Utilização: Deve ser importado no início de _base.css.
+ */
+
+ :root {
+    /* Tons de vermelho e laranja */
+    --brick-red:    #B82303;
+    --vivid-orange: #FF6100;
+    --peach:        #FE9E62;
+  
+    /* Tons de verde */
+    --dark-green:   #0F3D19;
+    --medium-green: #64946E;
+    --mint-green:   #A5CDAB;
+  
+    /* Neutros */
+    --dark-text:    #113a1b;
+    --light-bg:     #f7f7f5;
+  }

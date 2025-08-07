@@ -1,0 +1,157 @@
+/*
+ * Arquivo: project-detail.css
+ * Descrição: Estilos específicos para as páginas de detalhes de projetos.
+ * Utilização: Deve ser importado nas páginas proj_*.html.
+ */
+
+ @import url('_base.css');
+
+ /* Estilos específicos para a seção de detalhes do projeto */
+ .project-detail {
+   background-color: var(--light-bg);
+   color: var(--dark-text);
+ }
+ 
+ .project-detail h4 {
+   color: var(--dark-green);
+   font-weight: 700;
+   margin-bottom: 1.5rem;
+   border-bottom: 2px solid var(--peach);
+   padding-bottom: 0.5rem;
+   display: inline-block;
+ }
+ 
+ .project-description p {
+   line-height: 1.8;
+   margin-bottom: 1rem;
+ }
+ 
+ /* Estilos para o Carrossel */
+ #carouselExampleControls .carousel-item {
+   height: 600px;
+ }
+ 
+ #carouselExampleControls .carousel-item img {
+   object-fit: contain;
+   height: 80%;
+ }
+ 
+ #carouselExampleControls .carousel-caption {
+   background-color: rgba(15, 61, 25, 0.7);
+   padding: 1rem;
+   border-radius: 0.5rem;
+   color: white;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   width: 100%;
+   margin: 0;
+ }
+ 
+ #carouselExampleControls .carousel-caption h5 {
+   color: white;
+   font-weight: 600;
+ }
+ 
+ #carouselExampleControls .carousel-caption p {
+   color: white;
+   font-size: 0.9rem;
+ }
+ 
+ .carousel-control-prev-icon,
+ .carousel-control-next-icon {
+   background-color: var(--dark-green);
+   border-radius: 50%;
+   padding: 1.5rem;
+ }
+ 
+ /* Estilos para a Equipe do Projeto (cartões de membros dentro do detalhe) */
+ .project-team .card {
+   border: 1px solid var(--mint-green);
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+ }
+ 
+ .project-team .card-img-top {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 3px solid var(--peach);
+   transition: border-color 0.3s ease;
+ }
+ 
+ .project-team .card:hover .card-img-top {
+   border-color: var(--vivid-orange);
+ }
+ 
+ .project-team .card-body {
+   padding: 1rem;
+ }
+ 
+ .project-team .card-title {
+   color: var(--dark-text);
+   font-weight: 600;
+ }
+ 
+ .project-team .card-text {
+   color: var(--medium-green);
+ }
+ 
+ /* Botão "Perfil Lattes" */
+ .project-team .btn-outline-success {
+     color: var(--medium-green);
+     border-color: var(--medium-green);
+     transition: background-color 0.3s ease, color 0.3s ease;
+ }
+ 
+ .project-team .btn-outline-success:hover {
+     background-color: var(--medium-green);
+     color: white;
+ }
+ 
+ /* Container de vídeo para responsividade */
+ .video-container {
+     margin-bottom: 2rem;
+ }
+ 
+ .video-container .ratio {
+     margin-bottom: 1rem;
+ }
+ 
+ /* Adaptações para telas menores */
+ @media (max-width: 768px) {
+    .project-detail, .project-description {
+      padding: 0 1rem;
+    }
+ 
+   .project-detail h4 {
+     text-align: center;
+     width: 100%;
+   }
+ 
+   .project-team .card {
+     margin-bottom: 1rem;
+   }
+   
+  #carouselExampleControls .carousel-caption {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  #carouselExampleControls .carousel-caption h5 {
+    font-size: 1rem;
+  }
+
+  #carouselExampleControls .carousel-caption p {
+    font-size: 0.75rem;
+  }
+}
+
+#carouselExampleControls .carousel-caption {
+  display: block !important;
+}
+

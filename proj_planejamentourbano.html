@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Análise de Congestionamento Urbano - LSN</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    
+    <link href="assets/css/project-detail.css" rel="stylesheet" />
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">LSN</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="projetos.html">Projetos</a></li>
+          </ul>
+          <div class="d-flex">
+            <a href="contato.html" class="btn btn-contact">Contato</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div style="height: 80px;"></div>
+
+    <section class="project-detail py-5">
+      <div class="container">
+        <div class="elementor-widget-container text-center mb-5">
+            <div class="elementor-widget-container text-center mb-5">
+                <h3 class="elementor-headline e-animated bounce-title">
+                  <span class="word">Análise</span>
+                  <span class="word">Computacional</span>
+                  <span class="word">do Congestionamento</span>
+                  <span class="word">Urbano</span>
+                </h3>         
+            </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="project-description mb-5">
+            <h4>Visão Geral</h4>
+            <p>
+              O rápido crescimento da área urbana sem o devido cuidado pode gerar diversos
+              problemas econômicos, sociais, ambientais e pode comprometer a estrutura a
+              malha urbana. A previsão de quão vantajoso é uma mudança no conjunto de vias
+              seja com reformas ou adicionadas pode otimizar o gasto em trânsito, que pode
+              ser realocado em outras áreas essenciais, diminuição na poluição ou redução de
+              congestionamentos. Através de modelagem computacional, esse projeto propõe
+              simulações para entender como congestionamentos se propagam em diferentes
+              cidades e quais são as vias mais podem ser mais frágeis a engarrafamentos.
+              Além disso, para esse estudo é necessário o conhecimento de uma
+              matriz Origem-Destino (OD) que é muito difícil de ser coletada devido à um
+              grandes esforços na sua coleta e nos problemas éticos que isso pode causar. Para
+              evitar isso será avaliado algoritmos que a partir de fluxos coletados da API do
+              Google Maps é possível conseguir a matriz OD. Portanto, esse trabalho visa
+              contribuir para uma melhor entendimento do fenômeno de congestionamento
+              e como acontece a sua propagação dentro da cidade o que pode acarretar em um novo
+              conhecimento sobre a física de percolação nesse contexto.
+            </p>
+          </div>
+
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="assets/img/resultado_aldeota.png" class="d-block w-100" alt="Resultado da simulação de congestionamento na malha viária da Aldeota.">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                  <p>Resultado da simulação de congestionamento na malha viária da Aldeota. A interdição de uma via central (em vermelho)
+                      causa a propagação do tráfego, com o impacto medido pelo tempo de percurso (escala de cores), onde valores maiores
+                      (verde, até 8.57) indicam as vias mais afetadas.
+                  </p>
+                  </div>
+                </div>
+              </div>
+              </button>
+            </div>
+          
+          <div class="project-team mb-5 mt-5">
+            <h4>Equipe do Projeto</h4>
+            <div class="row g-3 justify-content-center">
+                <div class="col-12">
+                    <article class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+                      <div class="flex-grow-1">
+                        <h5 class="mb-1">Ascanio Dias Araújo</h5>
+                        <small class="text-muted">Orientador</small>
+                      </div>
+                      <a
+                        href="http://lattes.cnpq.br/2940950386915746"
+                        class="btn btn-outline-success btn-sm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Lattes
+                      </a>
+                    </article>
+                  </div>
+                  <div class="col-12">
+                    <article class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+          
+                      <div class="flex-grow-1">
+                        <h5 class="mb-1">Michael Ferreira de Souza</h5>
+                        <small class="text-muted">Coorientador</small>
+                      </div>
+                      <a
+                        href="http://lattes.cnpq.br/1246776718921674"
+                        class="btn btn-outline-success btn-sm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Lattes
+                      </a>
+                    </article>
+                  </div>
+                  <div class="col-12">
+                    <article class="d-flex align-items-center p-3 bg-white rounded shadow-sm">
+          
+                      <div class="flex-grow-1">
+                        <h5 class="mb-1">Carlos Miguel Moreira Gonçalves </h5>
+                        <small class="text-muted">Doutorando</small>
+                      </div>
+                      <a
+                        href="http://lattes.cnpq.br/7514213361070514"
+                        class="btn btn-outline-success btn-sm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Lattes
+                      </a>
+                    </article>
+                  </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4">
+            <a href="projetos.html" class="btn btn-primary">Voltar para Projetos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container text-center py-3">
+        © 2025 LSN – Todos os direitos reservados
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"
+        defer>
+    </script>
+  </body>
+</html>

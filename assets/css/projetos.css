@@ -1,0 +1,67 @@
+/*
+ * Arquivo: projetos.css
+ * Descrição: Estilos específicos para a página de listagem de projetos (projetos.html).
+ * Utilização: Deve ser importado apenas na página projetos.html.
+ */
+
+ @import url('_base.css');
+
+ /* TÍTULO SIMPLES DE PROJETOS */
+ .projetos-header h2 {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   color: var(--dark-text);
+   text-align: center;
+ }
+ 
+ /* CARDS DE PROJETOS */
+ .card-lift {
+   background: white;
+   border: none;
+   border-radius: 1rem;
+   padding-bottom: 1.5rem;
+   box-shadow: 0 -6px 20px rgba(0,0,0,0.15);
+   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+   border: 2px solid transparent;
+ }
+ 
+ .card-lift:hover {
+   transform: translateY(-8px);
+   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+   border-color: var(--dark-green); /* Borda no hover para cards de projeto */
+ }
+ 
+ .card-lift .card-title {
+   color: var(--vivid-orange); /* Título do card de projeto */
+   font-weight: 600;
+   margin-top: 1rem;
+   position: relative;
+   padding-bottom: 0.5rem;
+   margin-bottom: 1rem;
+   font-size: large;
+ }
+ 
+ .card-lift .card-title::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   width: 40px;
+   height: 3px;
+   background-color: var(--vivid-orange); /* Linha sob o título do card de projeto */
+   transform: translateX(-50%);
+   border-radius: 2px;
+ }
+ 
+ .card-lift .card-text {
+   color: var(--medium-green);
+   margin-top: 0.5rem;
+ }
+ 
+ /* Botão "Detalhes" no card de projeto */
+ .btn-primary {
+     width: 60%; /* Ajuste de largura específico para este botão */
+     border-radius: 50px;
+     margin-left: auto;
+     margin-right: auto;
+ }

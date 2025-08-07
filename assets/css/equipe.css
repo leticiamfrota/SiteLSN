@@ -1,0 +1,227 @@
+/*
+ * Arquivo: equipe.css
+ * Descrição: Estilos específicos para a página de equipe (equipe.html).
+ * Utilização: Deve ser importado apenas na página equipe.html.
+ */
+
+ @import url('_base.css');
+
+ /* Seções com espaçamento vertical */
+ section.pt-5.pb-5 {
+     padding-top: 6rem !important;
+     padding-bottom: 6rem !important;
+     max-width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ /* Backgrounds específicos (se usados na equipe) */
+ .bg-menta {
+   background-color: var(--mint-green) !important;
+ }
+ 
+ /* Cartões (cards) – comportamento e estilo (para membros da equipe) */
+ .card {
+     background-color: #fefefe;
+     border-radius: 1rem;
+     border: none;
+     box-shadow: 0 6px 18px rgba(114, 149, 117, 0.15); /* Sombra específica da equipe */
+     transition: box-shadow 0.3s ease, transform 0.3s ease;
+ }
+ 
+ .card:hover {
+     box-shadow: 0 10px 25px rgba(114, 149, 117, 0.3);
+     transform: translateY(-8px);
+ }
+ 
+ .card .avatar-img {
+     width: 140px;
+     height: 140px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 3px solid var(--medium-green); /* Borda da imagem do avatar */
+     transition: border-color 0.3s ease;
+ }
+ 
+ .card:hover .avatar-img {
+     border-color: var(--vivid-orange); /* Borda do avatar no hover */
+ }
+ 
+ .card h5 {
+     color: var(--dark-text);
+     font-weight: 700;
+     margin-top: 1rem;
+ }
+ 
+ .card small {
+     color: var(--medium-green);
+     font-weight: 600;
+ }
+ 
+ .list-inline-item .btn {
+     color: var(--medium-green);
+     font-size: 1.1rem;
+     transition: color 0.3s ease;
+ }
+ 
+ .list-inline-item .btn:hover {
+     color: var(--dark-green); /* Ajustado para sua paleta */
+     background-color: transparent;
+     box-shadow: none;
+ }
+ 
+ /* Seção “Conheça o nosso time” (team-simple) */
+ .team-simple {
+     max-width: 900px;
+     margin: 0 auto 4rem auto;
+     color: var(--dark-text);
+     font-family: 'Poppins', sans-serif;
+ }
+ 
+ .team-simple h2 {
+     font-weight: 700;
+     font-size: 2.5rem;
+     margin-bottom: 3rem;
+     color: var(--dark-text);
+     text-align: center;
+ }
+ 
+ .team-simple .team-members {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 4rem;
+     justify-content: center;
+ }
+ 
+ .team-simple .member {
+     flex: 1 1 250px;
+     max-width: 250px;
+     text-align: center;
+ }
+ 
+ .team-simple .member img {
+     width: 180px;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 50%;
+     border: 3px solid var(--medium-green);
+     margin-bottom: 1rem;
+     transition: border-color 0.3s ease;
+ }
+ 
+ .team-simple .member:hover img {
+     border-color: var(--vivid-orange);
+ }
+ 
+ .team-simple .member h5 {
+     font-weight: 700;
+     margin-bottom: 0.5rem;
+ }
+ 
+ .team-simple .member small {
+     color: var(--medium-green);
+     font-weight: 600;
+     display: block;
+     margin-bottom: 1rem;
+ }
+ 
+ .team-simple .social-links a {
+     color: var(--medium-green);
+     font-size: 1.2rem;
+     margin: 0 0.4rem;
+     transition: color 0.3s ease;
+ }
+ 
+ .team-simple .social-links a:hover {
+     color: var(--dark-green);
+ }
+ 
+ /* Seção “Time” (lista detalhada) */
+ .time-section {
+     background-color: white;
+     padding: 4rem 2rem;
+     color: var(--dark-text); /* Ajustado */
+     min-height: auto;
+ }
+ 
+ .time-section h2 {
+     font-weight: 500;
+     font-size: 2.5rem;
+     color: var(--dark-green);
+     margin-bottom: 2rem;
+     text-align: center;
+ }
+ 
+ .time-section ul {
+     list-style: none;
+     max-width: 600px;
+     margin: 0 auto;
+     padding-left: 0;
+ }
+ 
+ .time-section ul li {
+     padding: 12px 0;
+     border-bottom: 1px solid var(--mint-green); /* Ajustado */
+     font-weight: 500;
+     font-size: 1.15rem;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: var(--dark-text); /* Ajustado */
+     transition: color 0.3s ease;
+ }
+ 
+ .time-section ul li:last-child {
+     border-bottom: none;
+ }
+ 
+ .time-section ul li:hover {
+     color: var(--dark-green); /* Ajustado */
+ }
+ 
+ .time-section ul li a {
+     color: var(--medium-green); /* Ajustado */
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 1rem;
+     transition: color 0.3s ease;
+ }
+ 
+ .time-section ul li a:hover {
+     color: var(--dark-green); /* Ajustado */
+     text-decoration: underline;
+ }
+ 
+ /* Estilo para destacar um aluno na lista */
+ .highlight-student {
+   border-left: 5px solid var(--vivid-orange);
+   box-shadow: 0 4px 15px -5px rgba(0,0,0,0.15);
+   transform: translateX(5px);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .highlight-student h5 {
+   color: var(--dark-green);
+   font-weight: 700;
+ }
+ 
+ /* Estilos para truncar o texto e expandir */
+ .bio-text {
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-bottom: 0.5rem;
+ }
+ 
+ .bio-text.expanded {
+   -webkit-line-clamp: unset;
+   overflow: visible;
+   text-overflow: unset;
+ }
+ 
+ /* Estilo para o botão "menos" */
+ .read-more-btn.expanded::after {
+   content: "menos";
+ }
